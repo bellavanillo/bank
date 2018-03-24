@@ -11,39 +11,45 @@
   <body>
     <div class="container">
         <h1>Welcome to Epicodus Credit Union</h1>
-        <form id="money">
-          <div class="well">
-            <h4>Register a new account</h4>
-            <div class="form-group">
-              <label for="name">name</label>
-              <input type="text" class="form-control" id="name">
-            </div>
-            <div class="form-group">
-              <label for="initialdeposit">Initial Deposit</label>
-              <input type="text" class="form-control" id="initial">
-            </div>
-          </div>
-          <div class="result">
+        <div id="new-client">
+          <form id="money">
             <div class="well">
-              <h4>Deposit or withdraw funds</h4>
+              <h4>Register a new account</h4>
               <div class="form-group">
-                <label for="depositamount">Deposit Amount</label>
-                <input type="text" class="form-control" id="Deposit">
+                <label for="name">name</label>
+                <input type="text" class="form-control" id="name">
               </div>
               <div class="form-group">
-                <label for="withdrawalamount">Withdrawal Amount</label>
-                <input type="text" class="form-control" id="withdrawal">
+                <label for="initialdeposit">Initial Deposit</label>
+                <input type="number" min="0" class="form-control" id="initialDeposit">
               </div>
             </div>
-            <div class="well">
-              <div class="form-group">
-                <label for="currentbalance">current balance:</label>
-                <input type="text" class="form-control" id="balance">
+            <button type="submit" name="button" class="btn btn-danger">submit</button>
+          </form>
+        </div>
+        <div id="manage">
+          <form id="transaction">
+            <!--<div class="transaction">-->
+            <br>
+              <div class="well">
+                <h4>Deposit or withdraw funds</h4>
+                <div class="form-group">
+                  <label for="depositamount">Deposit Amount</label>
+                  <input type="number" min="0" class="form-control" id="Deposit">
+                </div>
+                <div class="form-group">
+                  <label for="withdrawalamount">Withdrawal Amount</label>
+                  <input type="number" min="0" class="form-control" id="withdrawl">
+                </div>
               </div>
-          </div>
-          </div>
-          <button type="submit" name="button" class="btn btn-danger">submit</button>
-        </form>
+              <button type="submit" name="button" class="btn btn-danger">Update</button>
+            <!--</div>-->
+          </form>
+        </div>
+        <div class="balance">
+          <h3>Account name:<span id="account-name"></span></h3>
+          <h3>Balance:<span id="account-balance"></span></h3>
+      </div>
     </div>
   </body>
 </html>
